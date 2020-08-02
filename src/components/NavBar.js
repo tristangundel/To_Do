@@ -21,8 +21,11 @@ class NavBar extends Component {
 
     render() {
         return(
-            <div>
-                <Menu pointing>
+            <div className="navigation">
+                <Menu inverted pointing >
+                    <div id="nav-brand">
+                        <h2>To-Do List <i className="check circle icon"></i></h2>
+                    </div>
                     <Menu.Item
                         as={NavLink}
                         exact to="./"

@@ -1,0 +1,21 @@
+.authForm {
+    background-color: darkgrey;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 2%;
+}
+
+.authButton {
+    margin: auto;
+    width: 100%;
+}
+
+.authLink {
+    margin: auto;
+    width: 40%;
+}
+
+#nav-brand {
+    margin: 10px;
+    color: white;
+}
