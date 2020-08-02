@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/tristangundel/To_Do#readme",
     "dependencies": {
+        "css-loader": "^4.1.1",
         "express": "^4.17.1",
         "method-override": "^3.0.0",
         "mongoose": "^5.9.22",
@@ -29,7 +30,9 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.2.0",
-        "semantic-ui-react": "^0.88.2"
+        "sass-loader": "^9.0.2",
+        "semantic-ui-react": "^0.88.2",
+        "style-loader": "^1.2.1"
     },
     "devDependencies": {
         "@babel/core": "^7.10.4",
