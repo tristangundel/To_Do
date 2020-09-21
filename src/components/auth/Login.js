@@ -24,7 +24,7 @@ class Login extends Component {
     handleSubmit(event) {
         event.preventDefault();
         const userData = {
-            username: this.state.username,
+            email: this.state.email,
             password: this.state.password
         }
         console.log(userData);
@@ -58,9 +58,8 @@ class Login extends Component {
                                 />
                             </Form.Field>
                             <Grid.Column width={10} className="ui center">   
-                                <Button className="authButton" color="teal">Login</Button>
-                                <h4>Don't Have an Account?</h4>
-                                <Button as={Link} color="teal" className="authLink" to="/register">Create An Account</Button>
+                                <Button className="authButton" color="black">Login</Button>
+                                <h4>Don't Have an Account?  <Link to="/register">Create An Account</Link></h4>
                             </Grid.Column>
                         </Form>
                     </div>

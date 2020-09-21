@@ -81,9 +81,8 @@ class Register extends Component {
                         />
                     </Form.Field>
                     <Grid.Column width={10} className="ui center">   
-                                <Button className="authButton" color="teal">Create Account</Button>
-                                <h4>Already Have an Account?</h4>
-                                <Button as={Link} color="teal" className="authLink" to="/login">Login</Button>
+                                <Button className="authButton" color="black">Create Account</Button>
+                                <h4>Already Have an Account?  <Link to="/login">Login Here</Link></h4>
                             </Grid.Column>
                         </Form>
                     </div>
