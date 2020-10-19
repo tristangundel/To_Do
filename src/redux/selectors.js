@@ -1,10 +1,10 @@
 import { VISIBILITY_FILTERS } from "../constants";
 
-export const getToDoState = store => store.toDos;
+export const getToDoState = store => store.todos;
 
-export const getToDoList = store => getToDoState(store) ? getToDoState(store).allIds : [];
+export const getToDoList = store => getToDoState(store) ? getToDoState(store).allIDs : [];
 
-export const getToDoByID = (store, id) => getToDoState(store) ? { ...getToDoState(store).byIds[id], id} : {};
+export const getToDoByID = (store, id) => getToDoState(store) ? { ...getToDoState(store).byIDs[id], id} : {};
 
 export const getToDos = store => getToDoList(store).map(id => getToDoByID(store, id));
 

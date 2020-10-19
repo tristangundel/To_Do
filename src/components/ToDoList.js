@@ -1,11 +1,26 @@
-import React, { Component } from 'react';
+import React from "react";
+import { connect } from "react-redux";
+import ToDo from "./ToDo";
+import { getToDosByVisibilityFilter } from "../redux/selectors";
+import VisibilityFilters from "./VisibilityFilters";
+import AddToDo from "./AddToDo";
 
-class ToDoList extends Component {
-    render() {
-        return (
-            <h1>This is the Home page</h1>
-        );
-    }
-}
+const ToDoList = ({ todos }) => (
+    <div>
+        <AddToDo />
+        <VisibilityFilters />
+        <ul className="todo-list">
+            {todos && todos.length ? todos.map((todo, index) => {
+                return <ToDo key={`todo-${todo.id}`} todo={todo} />
+            }) : "No To-Dos! :)"}
+        </ul>
+    </div>
+);
 
-export default ToDoList;
+const mapStateToProps = state => {
+    const { visibilityFilter } = state;
+    const todos = getToDosByVisibilityFilter(state, visibilityFilter);
+    return { todos };
+};
+
+export default connect(mapStateToProps)(ToDoList);

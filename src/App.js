@@ -13,9 +13,9 @@ const App = () => {
             <NavBar />
             <div id="container">
                 <Route exact path="/" component={ ToDoList } />
-                <Route exact path="/login" component={ Login } />
+                {/* <Route exact path="/login" component={ Login } />
                 <Route exact path="/register" component={ Register } />
-                <Route exact path="/new" component={ New } />
+                <Route exact path="/new" component={ New } /> */}
             </div>
         </Router>
     );
