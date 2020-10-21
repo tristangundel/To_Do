@@ -1,4 +1,20 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
-export default createStore(rootReducer);
+const initialState = {
+    todos: {
+        allIDs: [],
+        byIDs: {}
+    },
+    visibilityFilter: ""
+
+};
+
+const middleware = [thunk];
+
+export default createStore(rootReducer, 
+                           initialState,
+                           composeWithDevTools(applyMiddleware(...middleware))  // ONLY FOR DEVELOPMENT!!! 
+);
